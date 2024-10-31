@@ -1,0 +1,30 @@
+h2, h3 {
+    color: #e7081d; /* Colore blu brillante */
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+}
+
+h4 {
+    color: #050505; /* Colore nero*/
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+}
+
+/* Cambia lo stile della navbar */
+.nav-link {
+    color: #f1edee; /* Cambia il colore dei link della navbar */
+    font-weight: bold; /* Rende il testo in grassetto */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+}
+
+.song-row{
+    display: none;
+}
+
+.arrow{
+    cursor: pointer;
+    font-size: 1.5em;
+}

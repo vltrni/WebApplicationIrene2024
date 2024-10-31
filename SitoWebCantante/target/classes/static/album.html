@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>album</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="Css/styles.css">
+
+</head>
+<body>
+
+<header class="bg-danger p-3 mb-4 text-white">
+
+  <div class="container">
+    <h1 class="text-center"><i class="fas fa-music"></i>Ultimo</h1>
+    <nav class="text-center text-white-50">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="biografia.html">Biografia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="album.html">Album</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="curiosita.html">Curiosità</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contatto.html">Contatta</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Card introduttiva che descrive la pagina -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Album più famosi di Ultimo</h5>
+      <p class="card-text">Di seguito alcuni degli album e le canzoni contenute in essi</p>
+    </div>
+  </div>
+
+  <div class="text-end mb-3">
+    <button id="addAlbumButton" class="btn btn-outline-primary btn-sm">
+      <i class="fas fa-plus"></i> Aggiungi un nuovo album
+    </button>
+
+    <button id="removeAlbumButton" class="btn btn-outline-danger btn-sm">
+      Rimuovi album
+    </button>
+  </div>
+
+
+
+  <section class="mb-5">
+    <table class="table table-striped table-bordered" id="albumTable">
+      <thead class="table-dark">
+      <tr>
+        <th>Titolo album</th>
+        <th>Anno di uscita</th>
+        <th>Azione</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="toggle-row">
+        <td>Pianeti</td>
+        <td>
+          <span class="badge bg-success">2017</span>
+        </td>
+        <td><button class="btn btn-danger btn-sm deleteButton"><i class="fa-solid fa-trash"></i></button></td>
+      </tr>
+
+      <tr>
+        <td>Colpa delle favole</td>
+        <td>
+          <span class="badge bg-success">2019</span>
+        </td>
+        <td><button class="btn btn-danger btn-sm deleteButton"><i class="fa-solid fa-trash"></i></button></td>
+      </tr>
+
+      <tr>
+        <td>Alba</td>
+        <td>
+          <span class="badge bg-success">2023</span>
+        </td>
+        <td><button class="btn btn-danger btn-sm deleteButton"><i class="fa-solid fa-trash"></i></button></td>
+
+      <tr>
+        <td>Altrove</td>
+        <td>
+          <span class="badge bg-success">2024</span>
+        </td>
+        <td><button class="btn btn-danger btn-sm deleteButton"><i class="fa-solid fa-trash"></i></button></td>
+
+      </tbody>
+    </table>
+  </section>
+
+  <div id="albumForm" style="display: none; margin-top: 20px;">
+    <h3>Aggiungi un nuovo album</h3>
+    <form id="newAlbumForm">
+      <div class="mb-3">
+        <label for="title" class="form-label">Titolo</label>
+        <input type="text" id="title" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="year" class="form-label">Anno</label>
+        <input type="number" id="year" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Aggiungi Album</button>
+    </form>
+  </div>
+
+  <div id="removeAlbumForm" style="display: none; margin-top: 10px;">
+    <h3>Rimuovi un album</h3>
+    <form id="removeAlbumByNumberForm" onsubmit="removeAlbumByNumber(event)">
+      <label for="albumNumber">Numero dell'album:</label>
+      <input type="number" id="albumNumber" min="1" required>
+      <button type="submit" class="btn btn-danger btn-sm">Rimuovi</button>
+    </form>
+  </div>
+
+</main>
+
+<script src="JS/addAlbum.js"></script>
+<script src="JS/deleteAlbum.js"></script>
+
+
+
+<footer class="bg-danger text-center p-3 mt-4 text-white">
+  <p>2024 - Web Application - Unical - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
